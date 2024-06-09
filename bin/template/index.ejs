@@ -1,19 +1,33 @@
-<% if (middleware.static) { %>
-    const serve = require("oa-static")
+import Koa from "koa";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+<% if (middleware.router) { %>
+    import Router from "koa-router";
 <% } %>
-    const app = new KeyboardEvent();
+
+<% if (middleware.static) { %>
+    import serve from "koa-static";
+<% } %>
+    const app = new Koa();
+
+ 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 <% if (middleware.static) { %> 
-    app.use(serve(_dirname+ "/static"));
+    app.use(serve(__dirname+"/static"));
 
 <% } %>
+
 <% if (middleware.router) { %> 
     const router = new Router();
     router.get("/",(ctx)=> {
         ctx.body = "hello koa-setup-test";
     });
     app.use(router.routes());
-<% } %>  
+<% } %> 
+ 
 app.listen(8080,() => {
     console.log("open server localhost:8080");
 })
