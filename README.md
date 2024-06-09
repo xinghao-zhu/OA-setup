@@ -2,7 +2,9 @@
 基于node.js的cli工具 - 动态生成代码模块, 类似与vue create fileName
 
 ## 用法
-下载完成之后输入```yarn``` 安装所有依赖, 根据script脚本内容输入```yarn test-g```生成一个 ```hello``` 文件夹，用户需要输入packageName，port,选择安装哪些依赖，之后代码会根据相关逻辑自动生成inde.js入口文件和package.json文件，在定位到hello文件后，输入```node index.js``` command就可以访问本地8080动态生成的代码页面
+- 下载完成之后输入```yarn``` 安装所有依赖, 根据script脚本内容输入```yarn test-g```生成一个 ```hello``` 文件夹
+- 用户需要输入packageName，port,选择安装哪些依赖，之后代码会根据相关逻辑自动生成inde.js入口文件和package.json文件
+- 在定位到hello文件后，输入```node index.js``` command就可以访问本地8080动态生成的代码页面
 
 ### 用到的npm库
 1. ejs -> 根据可选内容去渲染
