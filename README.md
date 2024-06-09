@@ -8,6 +8,7 @@
 1. ejs
 2. inquirer
 3. execa
+4. execa
 
 ### 步骤
 
