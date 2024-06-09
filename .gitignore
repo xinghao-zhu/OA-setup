@@ -1,9 +1,0 @@
-# 忽略所有的 log 文件
-*.log
-
-# Ignore node_modules directory
-node_modules/
-
-
-# Ignore vscode directory
-.vscode
