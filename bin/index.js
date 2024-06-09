@@ -1,11 +1,10 @@
+#!/usr/bin/env node
 import fs from "fs";
 import {execa} from 'execa';
 import indexTemplate from "./indexTemplate.js";
 import question from "./question/index.js";
 import config from "./config.js";
 import packageTemplate from "./packageTemplate.js";
-import { stdin } from "process";
-
 
 
 const rootPath = "./hello";

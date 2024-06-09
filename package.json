@@ -3,9 +3,11 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "bin": "./bin/index.js",
     "type": "module",
     "scripts": {
-        "test": "rm -rf ./hello && node index.js"
+        "test": "rm -rf ./hello && node index.js",
+        "test-g": "rm -rf ./hello && oa-setup"
     },
     "keywords": [],
     "author": "",
