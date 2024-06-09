@@ -1,0 +1,21 @@
+<% if (middleware.static) { %>
+    const serve = require("oa-static")
+<% } %>
+    const app = new KeyboardEvent();
+
+<% if (middleware.static) { %> 
+    app.use(serve(_dirname+ "/static"));
+
+<% } %>
+<% if (middleware.router) { %> 
+    const router = new Router();
+    router.get("/",(ctx)=> {
+        ctx.body = "hello koa-setup-test";
+    });
+    app.use(router.routes());
+<% } %>  
+app.listen(8080,() => {
+    console.log("open server localhost:8080");
+})
+
+   
